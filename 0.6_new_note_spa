@@ -1,0 +1,23 @@
+title 0.6: New note spa
+
+note left of browser: 
+notes page contains form element
+on form submit browser executes code
+to send user input to server as POST request
+end note
+end note
+
+note over browser: 
+update DOM with new note
+end note
+
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server: 
+server takes data from req.body field of
+POST request object. Creates new object from
+data and adds to Notes array
+end note
+
+server-->browser: HTML status code 201 (Created) & JSON content [{content: "new note",date: "2022-03-01T21:12:02.363Z"}, ...]
